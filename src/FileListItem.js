@@ -1,0 +1,23 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import FileIcon from './FileIcon';
+import FileName from './FileName';
+import CommitMessage from './CommitMessage';
+import Time from './Time';
+
+function FileListItem({file}) {
+  return(
+    <div className='filelist-item'>
+      <FileIcon type={file.type}/>
+      <FileName name={file.name}/>
+      <CommitMessage commit={file.latestCommit}/>
+      <Time time={file.updated_at} />
+    </div>
+  );
+}
+
+FileListItem.propTypes = {
+  file: PropTypes.object.isRequired
+};
+
+export default FileListItem;
