@@ -11,6 +11,19 @@
 
 }
 
+.name-icon {
+  width: 20%;
+}
+
+.message-body {
+  width: 60%;
+}
+
+.time-tag {
+  width: 20%;
+  text-align: right;
+}
+
 .file-icon {
   display: inline-block;
   width: 17px;
@@ -21,6 +34,10 @@
 }
 
 .commit-message {
-  max-width: 442px;
+  width: 100%;
   overflow: hidden;
+}
+
+.time {
+
 }

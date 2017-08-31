@@ -8,10 +8,16 @@ import Time from './Time';
 function FileListItem({file}) {
   return(
     <div className='filelist-item'>
-      <FileIcon type={file.type}/>
-      <FileName name={file.name}/>
-      <CommitMessage commit={file.latestCommit}/>
-      <Time time={file.updated_at} />
+      <div className='name-icon'>
+        <FileIcon type={file.type}/>
+        <FileName name={file.name}/>
+      </div>
+      <div className='message-body'>
+        <CommitMessage commit={file.latestCommit}/>
+      </div>
+      <div className='time-tag'>
+        <Time time={file.updated_at} />
+      </div>
     </div>
   );
 }
